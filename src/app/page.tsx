@@ -10,6 +10,7 @@ type TypeUser =   {
   name: string,
   username: string,
   email: string,
+  
   address: {
       street: string,
       suite: string,

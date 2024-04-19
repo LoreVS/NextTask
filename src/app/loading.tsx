@@ -1,0 +1,19 @@
+export default function Loading() {
+    console.log("loding123")
+    return(
+        <div>
+            <div>Loading</div>
+            <div>Loading</div>
+            <div>Loading</div>
+            <div>Loading</div>
+            <div>Loading</div>
+            <div>Loading</div>
+            <div>Loading</div>
+            <div>Loading</div>
+            <div>Loading</div>
+            <div>Loading</div>
+            <div>Loading</div>
+            <div>Loading</div>
+        </div>
+    )
+}

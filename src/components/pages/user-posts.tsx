@@ -30,7 +30,7 @@ export function UserPosts({ userId }: {
     }, [])
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <main className="bg-slate-400 flex min-h-screen flex-col items-center justify-between p-24">
             <div>Posts of user {userId}</div>
             <Link href={`/posts/${userId}/cards`}><button className="border border-zinc-800 p-2 rounded hover:bg-slate-500">Card Style</button></Link>
             <div>

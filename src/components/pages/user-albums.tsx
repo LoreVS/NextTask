@@ -30,7 +30,7 @@ export function UserAlbums({ userId }:{
    
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <main className="bg-slate-400 flex min-h-screen flex-col items-center justify-between p-24">
             <div>Albums of user {userId}</div>
             <div>
                 <Table dataSource={userAlbums} columns={albumColumns} />

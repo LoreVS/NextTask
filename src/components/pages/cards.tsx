@@ -6,9 +6,9 @@ import { Card } from "antd";
 
 const apiUrl = "https://jsonplaceholder.typicode.com/posts";
 
-export function Cards({ userId }: {
+export const Cards =({ userId }: {
     userId: string
-}) {
+}) => {
     const [userPosts, setUserPosts] = useState([]);
     const [gridcols, setGridCols] = useState('grid-cols-4');
 
@@ -36,22 +36,18 @@ export function Cards({ userId }: {
                 setGridCols('grid-cols-3');
             }
         };
-
-        // Добавляем обработчик события resize
         window.addEventListener('resize', handleResize);
-
-        // Убираем обработчик при размонтировании компонента
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
 
     return (
-        <main className="bg-slate-400 flex min-h-screen flex-col items-center justify-between p-24">
+        <main className="bg-slate-400 flex min-h-screen flex-col items-center p-24">
             <div>Posts of user {userId}</div>
             <div className={`grid ${gridcols} justify-items-stretch gap-5`}>
                 {userPosts.map(function(el:TypePost) {
-                    return <Card title={el.title}>{el.body}</Card>;
+                    return <Card key={el.id} title={el.title}>{el.body}</Card>;
                 })}
             </div>
         </main>
